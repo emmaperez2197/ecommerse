@@ -1,13 +1,12 @@
+const dotenv = require("dotenv").config()
+
 const express = require('express');
 
 const logger = require("morgan");
-const dotenv = require("dotenv");
 
 const MoongoseConnect = require('./dataBase/index')
 
-MoongoseConnect.connect();
-
-dotenv.config();
+MoongoseConnect.connect()
 const app = express();
 
 app.use(logger("dev"));
