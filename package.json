@@ -40,5 +40,9 @@
     "nodemon": "^2.0.16",
     "nyc": "^15.1.0",
     "sinon": "^14.0.0"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.0.1",
+    "jsonwebtoken": "^8.5.1"
   }
 }
