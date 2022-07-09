@@ -1,8 +1,12 @@
-const  {hashSync, compareSync} = require('bcryptjs');
+const  {hashSync, compareSync} = require('bcrypt');
 
-const hash = payload => hashSync(payload, 12)
+const hash = (payload) =>{
+    return hashSync(payload, 12)
+    }
 
-const anHash = (payload, hashPayload) => compareSync(payload, hashPayload) 
+const anHash = (payload, hashPayload) =>{ 
+    return compareSync(payload, hashPayload)
+ }
 
 
 module.exports = {
