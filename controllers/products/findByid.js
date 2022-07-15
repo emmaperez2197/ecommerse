@@ -6,7 +6,7 @@ const findByIdProduct  = async(req, res) => {
     const {id} = req.params;
     
     try {
-        const findByidProduct =  await Product.findById(id);
+        const findByidProduct =  await Product.findOne({products: id});
         if (!findByidProduct) {
             return  res.status(402).json({ message:  `no se encontro el producto con el id: ${req.params.id} `});
         }
