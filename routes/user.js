@@ -1,11 +1,11 @@
-const  { Router } = require('express');
+const { Router } = require('express');
 
-const router = Router()
+const router = Router();
 
-const { registrar } = require('../controllers/login/registrar')
+const { registrar } = require('../controllers/login/registrar');
 
-const {validateRegistro} = require('../middlewares/actions/registro')
- 
+const { validateRegistro } = require('../middlewares/actions/registro');
+
 router.post('/create', validateRegistro, registrar);
 
-module.exports = router
+module.exports = router;
