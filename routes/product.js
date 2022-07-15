@@ -9,5 +9,6 @@ const validateCreate = require('../middlewares/actions/product');
 
 router.post('/', validateCreate, create);
 router.get('/', findProducts);
+router.get('/', findByIdProducts);
 
 module.exports = router;
