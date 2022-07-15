@@ -7,10 +7,10 @@ const { findProducts } = require('../controllers/products/find');
 const {findByIdProduct} = require('../controllers/products/findByid')
 
 const validateCreate = require('../middlewares/actions/product');
-// const validateId = require('../middlewares/actions/validateId')
+const {validateId }= require('../middlewares/actions/validateId')
 
 router.post('/', validateCreate, create);
 router.get('/', findProducts);
-router.get('/:id', findByIdProduct);
+router.get('/:id',validateId, findByIdProduct);
 
 module.exports = router;
