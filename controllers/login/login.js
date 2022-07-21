@@ -1,4 +1,4 @@
-const User = require('../../models/user/User');
+ const User = require('../../models/user/User');
 
 const {anHash}= require('../../utils/bcrypt')
 const {createToken} = require('../../services/token')
